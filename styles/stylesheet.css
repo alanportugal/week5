@@ -12,7 +12,7 @@ header{
 }
 
 header h1{
-  color:mediumpurple;
+  color:brown;
   text-align: center;
   font-size: 3rem;
   font-family: 'Roboto';
@@ -27,7 +27,7 @@ header h1{
 
 .main-nav li{
   float: left;
-  border-right: 1px solid purple;
+  border-right: 1px solid green;
   width: 14.16%;
   background-color: mediumpurple;
 }
@@ -43,7 +43,7 @@ header h1{
 /* CSS for aside tag */
 aside{
   clear: both;
-  background-color:thistle;
+  background-color:darkcyan;
   float: left;
   height: 25rem;
 }
