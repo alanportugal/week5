@@ -1,5 +1,6 @@
 body{
   font-family: 'Roboto', sans-serif;
+  counter-reset: pages; /* initialize counter */
 }
 
 .content-wrapper{
@@ -77,8 +78,18 @@ figure img{
 }
 /*---------------------*/
 
+a {
+  counter-increment: pages; /* increment counter */
+}
+
+a::before {
+    content: counter(pages); /* display counter */
+}
+
 a:hover{
-  background-color: purple;
+  border: solid 2px #fff;
+  background-color:aquamarine;
+  box-shadow: 0 0 10px #fff;
 }
 
 footer{
