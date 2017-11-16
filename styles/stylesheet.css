@@ -3,6 +3,28 @@ body{
   counter-reset: pages; /* initialize counter */
 }
 
+/*CSS Game Code BEGIN*/
+body.cssgame{
+  font-family: 'Roboto', sans-serif;
+  counter-reset: sum;
+}
+
+#a:checked { counter-increment: sum 64; }
+#b:checked { counter-increment: sum 16; }
+#c:checked { counter-increment: sum -32; }
+#d:checked { counter-increment: sum 128; }
+#e:checked { counter-increment: sum 4; }
+#f:checked { counter-increment: sum -8; }
+
+.sum::before {
+  content: '= ' counter(sum);
+}
+
+#a:checked ~ #b:checked ~ #c:not(:checked) ~ #d:not(:checked) ~ #e:not(:checked) ~ #f:checked ~ .sum::after {
+  content: ' (hooray!)';
+}
+/*CSS Game Code END*/
+
 .content-wrapper{
   margin: 0 auto;
   text-align: center;
